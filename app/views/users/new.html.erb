@@ -1,0 +1,18 @@
+<% provide(:title, "Sign Up") %>
+<h1>Sign up here </h1>
+
+<%= form_for (@user) do |f| %>
+  <%= f.label :jina %>
+  <%= f.name_field, :jina, class: 'form-control' %>
+
+  <%= f.label :email %>
+  <%= f.email_field, :email, 'form-control' %>
+
+  <%= f.label :password%>
+  <%= f.password_field, :password, 'form-control' %>
+
+  
+  <%= f.label :password_confirmation%>
+  <%= f.password_field, :password_confirmation, 'form-control' %>
+  <%= f.submit,"btn btn-primary" %>
+<% end %>
