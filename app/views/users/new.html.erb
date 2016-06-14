@@ -1,18 +1,19 @@
-<% provide(:title, "Sign Up") %>
+
 <h1>Sign up here </h1>
+<%= render 'error_messages' %>
 
 <%= form_for(@user) do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control' %><br/><br/>
+  <%= f.text_field :name %><br/><br/>
 
   <%= f.label :email %>
-  <%= f.email_field :email, class:'form-control' %><br/><br/>
+  <%= f.email_field :email  %><br/><br/>
 
-  <%= f.label :password%>
-  <%= f.password_field :password, class:'form-control' %><br/><br/>
+  <%= f.label :password %>
+  <%= f.password_field :password %><br/><br/>
 
   
-  <%= f.label :password_confirmation%>
-  <%= f.password_field :password_confirmation, class:'form-control' %><br/><br/>
-  <%= f.submit class:"btn btn-primary" %>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br/><br/>
+  <%= f.submit %>
 <% end %>
